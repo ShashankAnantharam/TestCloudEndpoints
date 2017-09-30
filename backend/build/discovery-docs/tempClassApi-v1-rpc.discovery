@@ -1,0 +1,223 @@
+{
+ "kind": "discovery#rpcDescription",
+ "etag": "\"RnkXbyw9us4_w3H-FU6An0C4oYs/5zTRwhm4Biqelt5QHNMPHeII-is\"",
+ "discoveryVersion": "v1",
+ "id": "tempClassApi:v1",
+ "name": "tempClassApi",
+ "version": "v1",
+ "description": "This is an API",
+ "ownerDomain": "backend.myapplication.shashank_pc.example.com",
+ "ownerName": "backend.myapplication.shashank_pc.example.com",
+ "icons": {
+  "x16": "https://www.gstatic.com/images/branding/product/1x/googleg_16dp.png",
+  "x32": "https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png"
+ },
+ "protocol": "rpc",
+ "rootUrl": "https://myApplicationId.appspot.com/_ah/api/",
+ "rpcUrl": "https://myApplicationId.appspot.com/_ah/api/rpc",
+ "rpcPath": "/_ah/api/rpc",
+ "parameters": {
+  "alt": {
+   "type": "string",
+   "description": "Data format for the response.",
+   "default": "json",
+   "enum": [
+    "json"
+   ],
+   "enumDescriptions": [
+    "Responses with Content-Type of application/json"
+   ],
+   "location": "query"
+  },
+  "fields": {
+   "type": "string",
+   "description": "Selector specifying which fields to include in a partial response.",
+   "location": "query"
+  },
+  "key": {
+   "type": "string",
+   "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+   "location": "query"
+  },
+  "oauth_token": {
+   "type": "string",
+   "description": "OAuth 2.0 token for the current user.",
+   "location": "query"
+  },
+  "prettyPrint": {
+   "type": "boolean",
+   "description": "Returns response with indentations and line breaks.",
+   "default": "true",
+   "location": "query"
+  },
+  "quotaUser": {
+   "type": "string",
+   "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.",
+   "location": "query"
+  },
+  "userIp": {
+   "type": "string",
+   "description": "IP address of the site where the request originates. Use this if you want to enforce per-user limits.",
+   "location": "query"
+  }
+ },
+ "auth": {
+  "oauth2": {
+   "scopes": {
+    "https://www.googleapis.com/auth/userinfo.email": {
+     "description": "View your email address"
+    }
+   }
+  }
+ },
+ "schemas": {
+  "CollectionResponse_TempClass": {
+   "id": "CollectionResponse_TempClass",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "TempClass"
+     }
+    },
+    "nextPageToken": {
+     "type": "string"
+    }
+   }
+  },
+  "TempClass": {
+   "id": "TempClass",
+   "type": "object",
+   "properties": {
+    "a": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "id": {
+     "type": "string"
+    }
+   }
+  }
+ },
+ "methods": {
+  "tempClassApi.get": {
+   "id": "tempClassApi.get",
+   "allowGet": true,
+   "parameters": {
+    "ID": {
+     "type": "string",
+     "required": true
+    }
+   },
+   "parameterOrder": [
+    "ID"
+   ],
+   "returns": {
+    "$ref": "TempClass"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "tempClassApi.insert": {
+   "id": "tempClassApi.insert",
+   "parameters": {
+    "resource": {
+     "$ref": "TempClass"
+    }
+   },
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
+    "$ref": "TempClass"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "tempClassApi.list": {
+   "id": "tempClassApi.list",
+   "allowGet": true,
+   "parameters": {
+    "cursor": {
+     "type": "string"
+    },
+    "limit": {
+     "type": "integer",
+     "format": "int32"
+    }
+   },
+   "returns": {
+    "$ref": "CollectionResponse_TempClass"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "tempClassApi.patch": {
+   "id": "tempClassApi.patch",
+   "supportsPatch": true,
+   "parameters": {
+    "ID": {
+     "type": "string",
+     "required": true
+    },
+    "a": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "id": {
+     "type": "string"
+    }
+   },
+   "parameterOrder": [
+    "ID"
+   ],
+   "returns": {
+    "$ref": "TempClass"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "tempClassApi.remove": {
+   "id": "tempClassApi.remove",
+   "parameters": {
+    "ID": {
+     "type": "string",
+     "required": true
+    }
+   },
+   "parameterOrder": [
+    "ID"
+   ],
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "tempClassApi.update": {
+   "id": "tempClassApi.update",
+   "parameters": {
+    "ID": {
+     "type": "string",
+     "required": true
+    },
+    "resource": {
+     "$ref": "TempClass"
+    }
+   },
+   "parameterOrder": [
+    "resource",
+    "ID"
+   ],
+   "returns": {
+    "$ref": "TempClass"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  }
+ }
+}
