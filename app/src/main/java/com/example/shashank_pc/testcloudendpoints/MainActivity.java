@@ -4,6 +4,9 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.shashank_pc.myapplication.backend.tempClassApi.TempClassApi;
+import com.google.api.client.extensions.android.http.AndroidHttp;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -20,7 +23,10 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... params) {
 
-            
+            TempClassApi.Builder = new TempClassApi.Builder(
+                    AndroidHttp
+            )
+
             return null;
         }
     }
