@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.shashank_pc.myapplication.backend.TempClassEndpoint;
+import  com.example.shashank_pc.myapplication.backend.TempClass;
 import com.example.shashank_pc.myapplication.backend.tempClassApi.TempClassApi;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
                     .setHttpRequestInitializer(new HttpRequestInitializer() {
                         @Override
                         public void initialize(HttpRequest request) throws IOException {
+
+                            TempClassEndpoint tempClassEndpoint = null;
 
                         }
                     });
