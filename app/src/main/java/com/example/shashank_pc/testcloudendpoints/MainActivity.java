@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
        try {
 
-            TempClassEndpoint tempClassEndpoint = new TempClassEndpoint();
-        //    TempClass temp = tempClassEndpoint.get("ID");
+        //    TempClassEndpoint tempClassEndpoint = new TempClassEndpoint();
+            TempClass temp = new TempClass();
         //    int x = temp.getA();
         //    Toast.makeText(getApplicationContext(),Integer.toString(x),Toast.LENGTH_SHORT).show();
         }
