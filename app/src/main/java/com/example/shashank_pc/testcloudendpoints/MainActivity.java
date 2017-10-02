@@ -3,10 +3,11 @@ package com.example.shashank_pc.testcloudendpoints;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.shashank_pc.myapplication.backend.TempClassEndpoint;
 import  com.example.shashank_pc.myapplication.backend.TempClass;
-import com.example.shashank_pc.myapplication.backend.tempClassApi.TempClassApi;
+// import com.example.shashank_pc.myapplication.backend.tempClassApi.TempClassApi;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.http.HttpRequest;
@@ -21,11 +22,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+       try {
+
+            TempClassEndpoint tempClassEndpoint = new TempClassEndpoint();
+        //    TempClass temp = tempClassEndpoint.get("ID");
+        //    int x = temp.getA();
+        //    Toast.makeText(getApplicationContext(),Integer.toString(x),Toast.LENGTH_SHORT).show();
+        }
+        catch(Exception e)
+        {
+            Toast.makeText(getApplicationContext(),"Exception",Toast.LENGTH_SHORT).show();
+        }
+
     }
 
 
 
-    private class Testtask extends AsyncTask<String,String,String> {
+ /*   private class Testtask extends AsyncTask<String,String,String> {
 
 
         @Override
@@ -49,5 +63,5 @@ public class MainActivity extends AppCompatActivity {
 
             return null;
         }
-    }
+    }*/
 }

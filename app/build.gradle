@@ -17,6 +17,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    packagingOptions {
+        exclude 'com/google/appengine/repackaged/org/apache/commons/codec/language/bm/*'
+        exclude 'com/google/appengine/repackaged/org/codehaus/jackson/impl/*'
+        exclude 'com/google/appengine/repackaged/org/apache/commons/codec/language/*'
+    }
 }
 
 dependencies {
